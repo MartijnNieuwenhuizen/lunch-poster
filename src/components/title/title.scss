@@ -1,0 +1,16 @@
+.title {
+  z-index: 999;
+  position: relative;
+  max-width: 30rem;
+
+  &__text {
+    margin: 0;
+    font-size: 15vmin;
+    color: $white;
+  }
+  &__data {
+    margin: 0;
+    font-size: 5vmin;
+    font-weight: bold;
+  }
+}

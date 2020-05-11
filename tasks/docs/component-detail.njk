@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Front-End Library</title>
+  <link rel="stylesheet" href="/docs/static/css/style.css">
+  <link rel="stylesheet" href="/docs/static/css/highlight.css">
+</head>
+
+<body>
+
+  <aside class="container">
+    <ol class="breadcrumb">
+      <li><a href="/">Overview</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+  </aside>
+
+  <main class="container">
+
+    <h1>{{ title }}</h1>
+    <div class="lead">
+      {{ description | safe }}
+    </div>
+
+    {% if demo %}
+    <h2>Demo <a href="{{ demo }}">&#x2398;</a></h2>
+    <iframe class="panel panel-default" name="demo" src="{{ demo }}" frameborder="0" data-resize-to-height></iframe>
+    {% endif %}
+
+    {% if implementation %}
+    <h2>Implementation</h2>
+    {{ implementation | safe }}
+    {% endif %}
+
+    {% if sample %}
+    <h2>Code sample</h2>
+    <pre><code class="html">{{ sample | safe }}</code></pre>
+    {% endif %}
+
+  </main>
+
+  <!--[if gt IE 9]><!-->
+  <script src="/docs/static/js/iframe-height-resizer.js"></script>
+  <!--<![endif]-->
+
+</body>
+
+</html>

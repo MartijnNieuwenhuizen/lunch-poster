@@ -1,0 +1,65 @@
+@keyframes appear-lunch-text-1 {
+  from {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(10deg) translate(-1rem, -2rem);
+    opacity: 1;
+  }
+}
+@keyframes appear-lunch-text-2 {
+  from {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(20deg) translate(-2rem, -4rem);
+    opacity: 1;
+  }
+}
+@keyframes appear-lunch-text-3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(30deg) translate(-3rem, -6rem);
+  }
+}
+
+.mira-lunch-container {
+  position: relative;
+  // max-width: 20rem;
+  width: 30vmin;
+  stroke: $black;
+
+  &:hover,
+  &:focus {
+    stroke: $color-primary;
+  }
+}
+
+.mira-lunch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  fill: none;
+  transform-origin: right;
+  animation-duration: 0.6s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: $ease-in-out-heavy;
+  opacity: 0;
+
+  &:nth-of-type(1) {
+    animation-name: appear-lunch-text-1;
+  }
+  &:nth-of-type(2) {
+    animation-name: appear-lunch-text-2;
+  }
+  &:nth-of-type(3) {
+    animation-name: appear-lunch-text-3;
+    opacity: 1;
+  }
+}

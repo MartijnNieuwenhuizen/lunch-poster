@@ -1,0 +1,51 @@
+$flying-envelope-width: 8rem;
+$flying-envelope-height: 4rem;
+
+.flying-envelope {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: $flying-envelope-width;
+  height: $flying-envelope-height;
+  background-color: lighten($yellow, 15%);
+
+  &__top {
+    z-index: 99;
+    width: 0;
+    height: 0;
+    border-left: $flying-envelope-width / 2 solid transparent;
+    border-right: $flying-envelope-width / 2 solid transparent;
+    border-top: $flying-envelope-height / 2 solid $yellow;
+    transform: translateX(0);
+  }
+
+  &__left {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-bottom: $flying-envelope-height solid $yellow;
+    border-right: $flying-envelope-height * 2 solid transparent;
+  }
+  &__right {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-bottom: $flying-envelope-height solid lighten($yellow, 5%);
+    border-left: $flying-envelope-height * 2 solid transparent;
+  }
+  &__body {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+  }
+}

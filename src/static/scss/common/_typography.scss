@@ -1,0 +1,59 @@
+// @font-face {
+//   font-family: 'Trixie';
+//   src: url('/static/fonts/trixie-text-webfont.woff2') format('woff2'),
+//     url('/static/fonts/trixie-text-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+$base-font-size: 1rem;
+
+$font-size-l: 1.25rem;
+$font-size-m: $base-font-size;
+$font-size-s: 0.8rem;
+
+$heading-xl: 4.209rem;
+$heading-l: 3.157rem;
+$heading-m: 2.369rem;
+$heading-s: 1.777rem;
+
+$font-family: 'Brando Sans', sans-serif;
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+}
+
+h1,
+.h1 {
+  font-size: $heading-xl;
+  font-weight: bold;
+}
+h2,
+.h2 {
+  font-size: $heading-l;
+  font-weight: bold;
+}
+h3,
+.h3 {
+  font-size: $heading-m;
+  font-weight: bold;
+}
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  font-size: $heading-s;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  font-weight: bold;
+  color: inherit;
+}

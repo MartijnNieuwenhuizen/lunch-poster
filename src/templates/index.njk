@@ -1,0 +1,37 @@
+{% extends '../layout/default.njk' %}
+
+{% block body %}
+  <main class="home-layout">
+    <div class="home-layout__title">
+      {%- component 'title' -%}
+    </div>
+
+    {%- component 'question' -%}
+
+    <div class="home-layout__drop home-layout__drop-1">
+      {%- component 'drops/drop-a' -%}
+    </div>
+    <div class="home-layout__drop home-layout__drop-2">
+      {%- component 'drops/drop-b' -%}
+    </div>
+    <div class="home-layout__drop home-layout__drop-3">
+      {%- component 'drops/drop-c' -%}
+    </div>
+    <div class="home-layout__drop home-layout__drop-4">
+      {%- component 'drops/drop-d' -%}
+    </div>
+    <div class="home-layout__drop home-layout__drop-5">
+      {%- component 'drops/drop-e' -%}
+    </div>
+    <div class="home-layout__drop home-layout__drop-6">
+      {%- component 'drops/drop-f' -%}
+    </div>
+
+    <div class="home-layout__lunch-text">
+      {%- component 'mira-lunch' -%}
+    </div>
+
+    {# {%- component 'plane' -%} #}
+    {%- component 'envelope' -%}
+  </main>
+{% endblock %}

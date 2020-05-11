@@ -1,0 +1,9 @@
+$black: #020100;
+$white: #fff;
+$gray: lightgray;
+
+$color-primary: #f35010;
+$color-primary-lighter: lighten($color-primary, 5);
+$color-primary-light: lighten($color-primary, 1);
+$color-primary-dark: darken($color-primary, 5);
+$color-primary-darker: darken($color-primary, 20);

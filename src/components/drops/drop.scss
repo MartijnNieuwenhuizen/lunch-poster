@@ -1,0 +1,10 @@
+.drop {
+  width: 100%;
+  overflow: visible !important;
+  transition: 0.3s transform;
+
+  path {
+    // filter: drop-shadow(100px 100px 250px $color-primary);
+    filter: drop-shadow(60px 60px 50px $color-primary) blur(0.15rem);
+  }
+}
