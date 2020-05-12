@@ -1,6 +1,6 @@
 import confetti from 'canvas-confetti'
 
-export default class DropE {
+export default class DropB {
   constructor(element) {
     this._element = element
 
@@ -15,12 +15,12 @@ export default class DropE {
       !this._body.dataset.showQuestion ||
       this._body.dataset.showQuestion === 'false'
     ) {
-      this._body.setAttribute('data-show-question', 'true')
-      this._body.setAttribute('data-show-message', 'false')
+      this._body.setAttribute('data-show-message', 'true')
+      this._body.setAttribute('data-show-question', 'false')
       this._body.setAttribute('data-large-view-envelope', 'false')
 
       this._body.setAttribute('data-drops', 'true')
-      DropE._spray(event)
+      DropB._spray(event)
     }
   }
 

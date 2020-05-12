@@ -144,7 +144,7 @@
   animation: float-4 linear 10s infinite;
 }
 .drop-e {
-  animation: float-2 linear 10s 3s infinite;
+  animation: float-2 linear 13s infinite;
 
   .drop__icon {
     font-size: 10rem;
@@ -152,7 +152,7 @@
   }
 }
 .drop-f {
-  animation: float-3 linear 10s 3s infinite;
+  animation: float-3 linear 13s infinite;
 
   .drop__icon {
     filter: blur(0.2rem);
@@ -170,7 +170,7 @@
 .drop-d,
 .drop-e,
 .drop-f {
-  [data-show-question='true'] & {
+  [data-drops='true'] & {
     animation: none;
   }
 }

@@ -5,12 +5,12 @@ export default class Drop {
 
     this.startX = 0
     this.startY = 0
+    this._lastY = 0
     this._x = this.startX
     this._y = this.startY
     this._play = this._play.bind(this)
     this._body = document.querySelector('body')
 
-    // this._play()
     this._addObserver()
   }
 
@@ -21,19 +21,13 @@ export default class Drop {
   _addObserver() {
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
-        console.log('mutation: ', mutation)
-        if (mutation.type !== 'attributes') {
-          return
-        }
-        // if (mutation.attributeName === 'data-large-view-envelope') {
-        // }
-        // if (mutation.attributeName === 'data-show-question') {
-        // }
         if (
-          mutation.target.dataset.largeViewEnvelope === 'true' ||
-          mutation.target.dataset.showQuestion === 'true'
+          mutation.type === 'attributes' &&
+          mutation.attributeName === 'data-drops'
         ) {
-          this._moveDropAside()
+          mutation.target.dataset.drops === 'true'
+            ? this._moveDropAside()
+            : this._moveDropBack()
         }
       })
     })
@@ -51,7 +45,13 @@ export default class Drop {
         ? window.innerHeight - y - height / 2
         : -y - height / 2
 
+    this._lastY = this._y
     this._y = newY
+    this._play()
+  }
+
+  _moveDropBack() {
+    this._y = this._lastY
     this._play()
   }
 }

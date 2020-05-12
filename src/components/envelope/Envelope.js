@@ -15,6 +15,9 @@ export default class Envelope {
     ) {
       this._body.setAttribute('data-large-view-envelope', 'true')
       this._body.setAttribute('data-show-question', 'false')
+      this._body.setAttribute('data-show-message', 'false')
+
+      this._body.setAttribute('data-drops', 'true')
     }
   }
 }
