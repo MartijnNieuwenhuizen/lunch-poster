@@ -1,27 +1,19 @@
 .drop {
+  cursor: pointer;
   width: 100%;
   overflow: visible !important;
   transition: 0.3s transform;
   filter: drop-shadow(60px 60px 50px $color-primary) blur(0.15rem);
 
-  // &:hover,
-  // &:focus {
-  //   cursor: pointer;
-
-  //   path {
-  //     fill: lighten($black, 5);
-  //   }
-
-  //   .drop__icon {
-  //     opacity: 1;
-  //     transition: 0.6s $ease-in opacity;
-  //   }
-  // }
-
   path {
     fill: $black;
 
     transition: 0.3s $ease-out fill;
+
+    &:hover,
+    &:focus {
+      fill: lighten($black, 5);
+    }
   }
 
   &__wrapper {
@@ -40,5 +32,14 @@
     opacity: 0;
     transition: 1s $ease-out opacity;
     filter: blur(0.25rem);
+  }
+}
+.drop-e {
+  &:hover,
+  &:focus {
+    .drop__icon {
+      opacity: 1;
+      transition: 0.6s $ease-in opacity;
+    }
   }
 }
