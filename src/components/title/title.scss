@@ -2,8 +2,10 @@
   z-index: 999;
   position: relative;
   max-width: 30rem;
+  pointer-events: none;
 
   &__text {
+    pointer-events: none;
     margin: 0;
     font-size: 15vmin;
     color: $white;

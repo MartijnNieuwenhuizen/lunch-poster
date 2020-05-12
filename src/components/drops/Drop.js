@@ -20,7 +20,6 @@ export default class Drop {
   }
 
   _play() {
-    console.log('ipdate styles')
     this._element.style.transform = `translate(${this._x}px, ${this._y}px)`
 
     if (
@@ -48,7 +47,6 @@ export default class Drop {
   _addObserver() {
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
-        console.log('Observer calls')
         if (
           mutation.type === 'attributes' &&
           (mutation.target.dataset.largeViewEnvelope === 'true' ||
