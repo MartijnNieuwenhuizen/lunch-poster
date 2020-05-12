@@ -1,10 +1,17 @@
-<div class="envelope" data-module="envelope/Envelope">
-  <div class="envelope__top"></div>
+<svg class="envelope" data-module="envelope/Envelope" width="142px" height="71px" viewbox="0 0 142 71">
+  <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <rect id="Rectangle" stroke="#f35010" stroke-width="5" fill="#f35010" x="2.5" y="2.5" width="137" height="66"></rect>
+    <polygon id="Rectangle" fill="#B03C01" points="0 0 142 0 71 35.5"></polygon>
+  </g>
+</svg>
 
-  <div class="envelope__right"></div>
-  <div class="envelope__left"></div>
+<div class="envelope__body">
+  {%- component 'article' -%}
 
-  <div class="envelope__body">
-    {%- component 'article' -%}
-  </div>
+  <button class="envelope__remove" data-module="envelope/EnvelopeRemove">
+    <svg class="drop envelope__remove-svg" width="164px" height="138px" viewbox="0 0 164 138">
+      <path d="M133.300088,137.624064 C154.711381,137.624064 176.122674,115.393339 154.711381,66.5691982 C133.300088,17.7450576 102.985024,-1.13686838e-13 64.8646521,-1.13686838e-13 C26.7442797,-1.13686838e-13 -10.7882015,34.4396488 2.86521394,66.5691982 C16.5186294,98.6987476 111.888795,137.624064 133.300088,137.624064 Z" id="Oval-Copy-4" fill="currentColor"></path>
+    </svg>
+    <span class="envelope__remove-icon">✗</span>
+  </button>
 </div>

@@ -8,7 +8,7 @@ $flying-envelope-height: 4rem;
   transform: translateX(-50%);
   width: $flying-envelope-width;
   height: $flying-envelope-height;
-  background-color: lighten($yellow, 15%);
+  background-color: lighten($color-primary, 15%);
 
   &__top {
     z-index: 99;
@@ -16,7 +16,7 @@ $flying-envelope-height: 4rem;
     height: 0;
     border-left: $flying-envelope-width / 2 solid transparent;
     border-right: $flying-envelope-width / 2 solid transparent;
-    border-top: $flying-envelope-height / 2 solid $yellow;
+    border-top: $flying-envelope-height / 2 solid $color-primary;
     transform: translateX(0);
   }
 
@@ -27,7 +27,7 @@ $flying-envelope-height: 4rem;
 
     width: 0;
     height: 0;
-    border-bottom: $flying-envelope-height solid $yellow;
+    border-bottom: $flying-envelope-height solid $color-primary;
     border-right: $flying-envelope-height * 2 solid transparent;
   }
   &__right {
@@ -37,7 +37,7 @@ $flying-envelope-height: 4rem;
 
     width: 0;
     height: 0;
-    border-bottom: $flying-envelope-height solid lighten($yellow, 5%);
+    border-bottom: $flying-envelope-height solid lighten($color-primary, 5%);
     border-left: $flying-envelope-height * 2 solid transparent;
   }
   &__body {

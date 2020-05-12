@@ -1,6 +1,8 @@
 .article {
   padding: $spacing-m $spacing-xl;
   font-size: 1.3rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(black, 0.3);
+  background-color: $white;
 
   &__parag {
   }
