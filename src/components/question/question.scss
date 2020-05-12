@@ -40,11 +40,13 @@
     opacity: 0;
     transform: translate(25%, -25%) scale(0.8);
     transform-origin: center;
-    transition: 0.2s 2.5s $ease-overshoot transform, 0.2s 2.5s $ease-out opacity;
+    transition: 0.2s $ease-overshoot transform, 0.2s $ease-out opacity;
 
     [data-show-question='true'] & {
       opacity: 1;
       transform: translate(25%, -25%) scale(1);
+      transition: 0.2s 2.2s $ease-overshoot transform,
+        0.2s 2.2s $ease-out opacity;
     }
   }
 
