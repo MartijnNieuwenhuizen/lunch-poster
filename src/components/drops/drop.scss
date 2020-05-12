@@ -1,8 +1,89 @@
+@keyframes float-1 {
+  from {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, -20px);
+  }
+  40% {
+    transform: translate(15px, -25px);
+  }
+  60% {
+    transform: translate(-3px, 2px);
+  }
+  80% {
+    transform: translate(15px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes float-2 {
+  from {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(15px, -25px);
+  }
+  40% {
+    transform: translate(-3px, 2px);
+  }
+  60% {
+    transform: translate(15px, 0);
+  }
+  80% {
+    transform: translate(-10px, -20px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes float-3 {
+  from {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(15px, 0);
+  }
+  40% {
+    transform: translate(-10px, -20px);
+  }
+  60% {
+    transform: translate(15px, -25px);
+  }
+  80% {
+    transform: translate(-3px, 2px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes float-4 {
+  from {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, -20px);
+  }
+  40% {
+    transform: translate(-3px, 2px);
+  }
+  60% {
+    transform: translate(15px, -25px);
+  }
+  80% {
+    transform: translate(15px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 .drop {
   cursor: pointer;
   width: 100%;
   overflow: visible !important;
-  transition: 0.3s transform;
+  transition: 0.5s transform;
   filter: drop-shadow(60px 60px 50px $color-primary) blur(0.15rem);
 
   path {
@@ -41,5 +122,35 @@
       opacity: 1;
       transition: 0.6s $ease-in opacity;
     }
+  }
+}
+
+.drop-a {
+  animation: float-1 linear 10s infinite;
+}
+.drop-b {
+  animation: float-2 linear 10s infinite;
+}
+.drop-c {
+  animation: float-3 linear 10s infinite;
+}
+.drop-d {
+  animation: float-4 linear 10s infinite;
+}
+.drop-e {
+  animation: float-2 linear 10s 3s infinite;
+}
+.drop-f {
+  animation: float-3 linear 10s 3s infinite;
+}
+
+.drop-a,
+.drop-b,
+.drop-c,
+.drop-d,
+.drop-e,
+.drop-f {
+  [data-show-question='true'] & {
+    animation: none;
   }
 }

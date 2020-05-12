@@ -5,8 +5,11 @@ export default class Question {
 
     this._handleClick = this._handleClick.bind(this)
 
-    this._trigger = this._element.querySelector('button')
     this._body = document.querySelector('body')
-    this._trigger.addEventListener('click', this._handleClick)
+    this._element.addEventListener('click', this._handleClick)
+  }
+
+  _handleClick() {
+    this._body.setAttribute('data-show-question', 'false')
   }
 }

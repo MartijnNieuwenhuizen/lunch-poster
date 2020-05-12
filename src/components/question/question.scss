@@ -1,20 +1,69 @@
 .question {
-  opacity: 0;
   position: fixed;
   top: 50%;
   left: 50%;
-  font-size: 8vmin;
-
-  transform: translate(-50%, -40%) scale(0.5);
-  transform-origin: bottom;
-  opacity: 0;
-  color: gray;
+  transform: translate(-50%, -40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   [data-show-question='true'] & {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    color: black;
+    transform: translate(-50%, -50%);
+  }
 
-    transition: 2s 0.2s $ease-out transform, 2s 0.2s $ease-out opacity;
+  &__text {
+    opacity: 0;
+    font-size: 8vmin;
+    transform: scale(0.5);
+
+    transform-origin: bottom;
+    opacity: 0;
+    color: gray;
+
+    [data-show-question='true'] & {
+      opacity: 1;
+      transform: scale(1);
+      color: black;
+
+      transition: 2s 0.2s $ease-out transform, 2s 0.2s $ease-out opacity;
+    }
+  }
+
+  &__remove {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transform: translate(25%, -25%) scale(0.8);
+    transform-origin: center;
+    transition: 0.2s 2.5s $ease-overshoot transform, 0.2s 2.5s $ease-out opacity;
+
+    [data-show-question='true'] & {
+      opacity: 1;
+      transform: translate(25%, -25%) scale(1);
+    }
+  }
+
+  &__remove-svg path {
+    &:focus,
+    &:hover {
+      fill: darken($color-primary, 10) !important;
+    }
+  }
+
+  &__remove-icon {
+    pointer-events: none;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: blur(0.04rem);
   }
 }

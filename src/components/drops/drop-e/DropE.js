@@ -11,8 +11,13 @@ export default class DropE {
   }
 
   _handleClick(event) {
-    this._body.setAttribute('data-show-question', 'true')
-    DropE._spray(event)
+    if (
+      !this._body.dataset.showQuestion ||
+      this._body.dataset.showQuestion === 'false'
+    ) {
+      this._body.setAttribute('data-show-question', 'true')
+      DropE._spray(event)
+    }
   }
 
   static _spray(event) {
