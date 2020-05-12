@@ -59,8 +59,8 @@ $envelope-width: 7rem;
       opacity: 1;
       transform: translate(0, -50%) scale(1);
 
-      transition: 0.2s 0.8s $ease-overshoot transform,
-        0.2s 0.8s $ease-out opacity;
+      transition: 0.2s 0.7s $ease-overshoot transform,
+        0.2s 0.7s $ease-out opacity;
     }
   }
   &__remove path {
