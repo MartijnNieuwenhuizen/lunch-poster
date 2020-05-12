@@ -2,12 +2,43 @@
   width: 100%;
   overflow: visible !important;
   transition: 0.3s transform;
+  filter: drop-shadow(60px 60px 50px $color-primary) blur(0.15rem);
+
+  // &:hover,
+  // &:focus {
+  //   cursor: pointer;
+
+  //   path {
+  //     fill: lighten($black, 5);
+  //   }
+
+  //   .drop__icon {
+  //     opacity: 1;
+  //     transition: 0.6s $ease-in opacity;
+  //   }
+  // }
 
   path {
-    // filter: drop-shadow(100px 100px 250px $color-primary);
-    filter: drop-shadow(60px 60px 50px $color-primary) blur(0.15rem);
+    fill: $black;
+
+    transition: 0.3s $ease-out fill;
   }
-}
-.drop-e {
-  cursor: pointer;
+
+  &__wrapper {
+    position: relative;
+    transition: 0.3s transform;
+  }
+
+  &__icon {
+    pointer-events: none;
+    color: $white;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 1s $ease-out opacity;
+    filter: blur(0.25rem);
+  }
 }

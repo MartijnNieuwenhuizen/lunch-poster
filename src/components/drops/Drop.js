@@ -20,8 +20,8 @@ export default class Drop {
   }
 
   _play() {
+    console.log('ipdate styles')
     this._element.style.transform = `translate(${this._x}px, ${this._y}px)`
-    // this._element.style.transform = `translate(${this._y}px, ${this._x}px)`
 
     if (
       this._x > this.startX + this._movementMax ||
@@ -40,13 +40,20 @@ export default class Drop {
     this._x += this._dx
     this._y += this._dy
 
-    requestAnimationFrame(this._play)
+    setTimeout(() => {
+      requestAnimationFrame(this._play)
+    }, 100)
   }
 
   _addObserver() {
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
-        if (mutation.type === 'attributes') {
+        console.log('Observer calls')
+        if (
+          mutation.type === 'attributes' &&
+          (mutation.target.dataset.largeViewEnvelope === 'true' ||
+            mutation.target.dataset.showQuestion === 'true')
+        ) {
           this._moveDropAside()
         }
       })
@@ -58,19 +65,13 @@ export default class Drop {
   }
 
   _moveDropAside() {
-    const { y, x, height } = this._element.getBoundingClientRect()
-    console.log(
-      'Math.floor((y / window.innerHeight) * 100): ',
-      Math.floor((y / window.innerHeight) * 100)
-    )
+    const { y, height } = this._element.getBoundingClientRect()
+
     const newY =
       Math.floor((y / window.innerHeight) * 100) > 50
         ? window.innerHeight - y - height / 2
         : -y - height / 2
 
-    // const newY = y
-
     this._y = newY
-    this._play()
   }
 }
