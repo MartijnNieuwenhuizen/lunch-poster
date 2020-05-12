@@ -16,6 +16,7 @@ export default class DropE {
       this._body.dataset.showQuestion === 'false'
     ) {
       this._body.setAttribute('data-show-question', 'true')
+      this._body.setAttribute('data-large-view-envelope', 'false')
       DropE._spray(event)
     }
   }

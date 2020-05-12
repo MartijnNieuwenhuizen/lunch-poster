@@ -100,28 +100,25 @@
   &__wrapper {
     position: relative;
     transition: 0.3s transform;
+
+    &:hover,
+    &:focus {
+      .drop__icon {
+        opacity: 1;
+        transition: 0.6s $ease-in opacity;
+      }
+    }
   }
 
   &__icon {
     pointer-events: none;
     color: $white;
-    font-size: 10rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: 1s $ease-out opacity;
-    filter: blur(0.25rem);
-  }
-}
-.drop-e {
-  &:hover,
-  &:focus {
-    .drop__icon {
-      opacity: 1;
-      transition: 0.6s $ease-in opacity;
-    }
   }
 }
 
@@ -130,6 +127,15 @@
 }
 .drop-b {
   animation: float-2 linear 10s infinite;
+
+  .drop__icon {
+    filter: blur(0.15rem);
+
+    svg {
+      width: 4vmin;
+      height: auto;
+    }
+  }
 }
 .drop-c {
   animation: float-3 linear 10s infinite;
@@ -139,9 +145,23 @@
 }
 .drop-e {
   animation: float-2 linear 10s 3s infinite;
+
+  .drop__icon {
+    font-size: 10rem;
+    filter: blur(0.25rem);
+  }
 }
 .drop-f {
   animation: float-3 linear 10s 3s infinite;
+
+  .drop__icon {
+    filter: blur(0.2rem);
+
+    svg {
+      width: 10vmin;
+      height: auto;
+    }
+  }
 }
 
 .drop-a,

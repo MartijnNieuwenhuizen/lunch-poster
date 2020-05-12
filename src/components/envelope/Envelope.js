@@ -9,8 +9,12 @@ export default class Envelope {
   }
 
   _open() {
-    this._body.dataset.largeViewEnvelope === 'true'
-      ? this._body.setAttribute('data-large-view-envelope', 'false')
-      : this._body.setAttribute('data-large-view-envelope', 'true')
+    if (
+      !this._body.dataset.largeViewEnvelope ||
+      this._body.dataset.largeViewEnvelope === 'false'
+    ) {
+      this._body.setAttribute('data-large-view-envelope', 'true')
+      this._body.setAttribute('data-show-question', 'false')
+    }
   }
 }

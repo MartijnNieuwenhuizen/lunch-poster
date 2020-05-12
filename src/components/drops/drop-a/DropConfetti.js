@@ -1,10 +1,10 @@
 import confetti from 'canvas-confetti'
 
-export default class DropA {
+export default class DropConfetti {
   constructor(element) {
     this._element = element
 
-    this._element.addEventListener('click', DropA._spray)
+    this._element.addEventListener('click', DropConfetti._spray)
   }
 
   static _spray(event) {

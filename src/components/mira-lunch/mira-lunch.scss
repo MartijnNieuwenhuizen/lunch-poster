@@ -29,14 +29,8 @@
 
 .mira-lunch-container {
   position: relative;
-  // max-width: 20rem;
   width: 30vmin;
   stroke: $black;
-
-  &:hover,
-  &:focus {
-    stroke: $color-primary;
-  }
 }
 
 .mira-lunch {

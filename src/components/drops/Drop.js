@@ -21,10 +21,17 @@ export default class Drop {
   _addObserver() {
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
+        console.log('mutation: ', mutation)
+        if (mutation.type !== 'attributes') {
+          return
+        }
+        // if (mutation.attributeName === 'data-large-view-envelope') {
+        // }
+        // if (mutation.attributeName === 'data-show-question') {
+        // }
         if (
-          mutation.type === 'attributes' &&
-          (mutation.target.dataset.largeViewEnvelope ||
-            mutation.target.dataset.showQuestion)
+          mutation.target.dataset.largeViewEnvelope === 'true' ||
+          mutation.target.dataset.showQuestion === 'true'
         ) {
           this._moveDropAside()
         }
