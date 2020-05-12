@@ -1,5 +1,5 @@
-$envelope-width: 50rem;
-$envelope-height: 25rem;
+$envelope-width: 50vw;
+$envelope-height: 25vw;
 
 $green: #0c4333;
 $yellow: #fbda50;
@@ -121,6 +121,7 @@ $red: #ff504b;
   &__left,
   &__right {
     filter: blur(0.3rem);
+
     [data-large-view-envelope='true'] & {
       filter: none;
     }
