@@ -43,7 +43,7 @@
     bottom: 0;
     right: 0;
     opacity: 0;
-    transform: translate(25%, 25%) scale(0.8);
+    transform: translate(25%, 25%) scale(0.6);
     transform-origin: center;
     transition: 0.2s $ease-overshoot transform, 0.2s $ease-out opacity;
     pointer-events: none;
@@ -51,7 +51,7 @@
     [data-show-message='true'] & {
       pointer-events: initial;
       opacity: 1;
-      transform: translate(50%, 0%) scale(1);
+      transform: translate(70%, -60%) scale(0.8);
 
       transition: 0.2s 2.2s $ease-overshoot transform,
         0.2s 2.2s $ease-out opacity;
