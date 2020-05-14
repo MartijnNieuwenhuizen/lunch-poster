@@ -1,4 +1,5 @@
 .message {
+  z-index: -1;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -8,13 +9,14 @@
   justify-content: center;
 
   [data-show-message='true'] & {
+    z-index: 1;
     opacity: 1;
     transform: translate(-50%, -50%);
   }
 
   &__text {
     opacity: 0;
-    font-size: 8vmin;
+    font-size: 6vmin;
     line-height: 1.2;
     transform: scale(0.5);
 
