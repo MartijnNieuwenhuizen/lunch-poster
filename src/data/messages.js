@@ -1,4 +1,9 @@
 export default [
+  "Team you're wonderful, keep meeting, keep being amazing and let's have moar drinks!",
+  'If you have a bad day you can always put some whiskey in your coffee ;)',
+  'Forget the "new normal" - we\'ll be back to normal soon, all of us :)',
+  'You -with a little bit of me- are going change the world!',
+  'Better times are coming! :)',
   'Keep it up all! Make the best of the lockdown and start something just for fun!!',
   "Can't wait to see everyone in real life! Best times are coming!",
   "We're remote but closer",

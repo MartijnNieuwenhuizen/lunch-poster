@@ -1,4 +1,10 @@
 export default [
+  'What did you discover about yourself during this time?',
+  'Who of you contemplated or even got a pet?',
+  "What's the one thing you'll take from home to the office?",
+  'What is the first thing you will do when you can work at the office again?',
+  'What great movies did you see during the quarantine?',
+  'How do you socialise online?',
   'Did you start growing your own veggies already?',
   'Did you have a work desk at home?',
   'What do you miss the most?',
