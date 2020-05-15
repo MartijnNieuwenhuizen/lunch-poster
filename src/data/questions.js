@@ -1,4 +1,6 @@
 export default [
+  'Will you feel comfortable to travel anywhere this year?',
+  "Whats the first thing we're going to do on the Rotterdam roof terrace?",
   'What did you discover about yourself during this time?',
   'Who of you contemplated or even got a pet?',
   "What's the one thing you'll take from home to the office?",
@@ -32,7 +34,6 @@ export default [
   'What was the last show you binged on Netflix?',
   "What's the longest distance you have travelled?",
   'What is the first thing that you will do once this lockdown is over?',
-  "What's your vacation plans?",
   'Which restaurant is the first you will go to?',
   'What is your plan for holiday this year?',
   'What is your top Netflix quarantine recommendation?',

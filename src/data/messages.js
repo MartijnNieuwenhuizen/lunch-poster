@@ -1,4 +1,6 @@
 export default [
+  'Give yourself permission to feel all your feelings. These are weird times for everyone.',
+  "YOU'RE DOING GREAT!!!!",
   "Team you're wonderful, keep meeting, keep being amazing and let's have moar drinks!",
   'If you have a bad day you can always put some whiskey in your coffee ;)',
   'Forget the "new normal" - we\'ll be back to normal soon, all of us :)',
@@ -29,11 +31,12 @@ export default [
   "It's so inspiring to see the motivation and energy of the team not being lost despite the situation!",
   'You go girl!!!! (and boy) you are stronger than you think you are:)',
   'You are the best!!! Hopefully see you soon :)',
+
   "Your home is your charging station - you've never been this charged!",
   "I'm super proud of the effort that we are all putting in this, thank you all! :)",
-  "You are not alone, we're in this together!",
   'We are lucky to have this secure position of having a great job, doing great work and being able to do this while in crisis',
   "Everything's gonna be alright",
+
   'Happy to join such a positive work-from-home force!',
   '"The secret source of humor is not joy but sorrow; there is no humor in heaven." - Mark Twain',
   'keep up the good job',
