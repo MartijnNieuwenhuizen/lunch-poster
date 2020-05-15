@@ -14,7 +14,7 @@ export default class Message {
     this._text = document.querySelector('.message__text')
     this._element.addEventListener('click', this._handleClick)
 
-    // this._setText()
+    this._setText()
   }
 
   _setText() {
@@ -23,7 +23,7 @@ export default class Message {
   }
 
   _handleClick() {
-    // this._setText()
+    this._setText()
 
     this._body.setAttribute('data-show-message', 'false')
     this._body.setAttribute('data-drops', 'false')

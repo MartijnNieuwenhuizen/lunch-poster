@@ -26,8 +26,8 @@ export default class Question {
     this._triggerNext.addEventListener('click', this._handleNext)
     this._triggerClose.addEventListener('click', this._handleClose)
 
-    // this._setNames()
-    // this._setRandomQuestion()
+    this._setNames()
+    this._setRandomQuestion()
   }
 
   _handleNext(event) {
@@ -37,7 +37,7 @@ export default class Question {
   }
 
   _handleClose() {
-    // this._setRandomQuestion()
+    this._setRandomQuestion()
 
     this._body.setAttribute('data-show-question', 'false')
     this._body.setAttribute('data-drops', 'false')
