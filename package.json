@@ -73,7 +73,7 @@
     "gulp-filter": "^6.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^6.0.0",
-    "gulp-mocha": "^6.0.0",
+    "gulp-mocha": "^8.0.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
